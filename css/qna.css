@@ -7,6 +7,8 @@
 .status {
     height: 10px;
     width: 50%;
+    position: absolute;
+    top: 50px;
     background-color: aliceblue;
     margin-bottom: 2rem;
     border-radius:10px;
@@ -22,7 +24,8 @@
 }
 
 #question {
-    margin: 1rem;
+    position:absolute;
+    top:100px;
     padding: 1rem;
     box-sizing: border-box;
     font-family: 'Gaegu', cursive;
@@ -32,11 +35,17 @@
 
     background-color:#f6f4d2;
     width: 50%;
+    
     border-radius: 10px;
     box-shadow: 0 5px 8px rgba(0,0,0,0.25),0 5px 8px rgba(0,0,0,0.2);
 }
 
 #answer {
+    
+    
+    
+    position:absolute;
+    top:200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,29 +53,10 @@
     height: 250px;
 }
 
-.answerOptions {
-    padding: 0.5rem;
-    border-radius: 10px; 
-    font-size: 1.25rem;
-    background-color: #f6f4d2;
-    display: block;
-    
-    color: #f19c79;
-    
-    font-family: 'Gaegu', cursive;
-    font-weight:bold;
-    border: 1px solid #f19c79;
-
-    margin: 0.5rem;
-    width: 50%;
+.answerOptions{
+    font-size:1.25rem;
 }
 
-
-.answerOptions:hover, .answerOptions:focus {
-    background-color: #a44a3f;
-    color: #f6f4d2;
-    border: 1px solid #f6f4d2;
-}
 /* #d4e09b
 #f6f4d2
 #cbdfbd

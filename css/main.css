@@ -2,7 +2,7 @@
 #main {
     background-color: #f6f4d2;
     width: 80%;
-    height: 85%;
+    height: 75%;
 
     flex-direction: column;
     align-items: center;
@@ -10,9 +10,15 @@
     border-radius: 15px;
 
     box-shadow: 0 5px 8px rgba(0,0,0,0.25),0 5px 8px rgba(0,0,0,0.2);
+
+    font-size: 1.25rem;
 }
 
-img {
+#main h1 {
+    font-size: 2rem;
+}
+
+#main img {
     max-width: 100%;
     height: 200px;
 }
@@ -21,6 +27,24 @@ img {
     #main img {
         height: 250px;
     }
+}
+
+#main button {
+    
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    width: 60%;
+    border: 1px solid #f19c79;
+    background-color: #f6f4d2;
+    color: #f19c79;
+    border-radius:10px;
+
+}
+
+#main button:hover{
+    background-color: #a44a3f;
+    color: #f6f4d2;
+    border: 1px solid #f6f4d2;
 }
 
 /* #d4e09b

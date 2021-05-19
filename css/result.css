@@ -1,16 +1,57 @@
 #result {
     
     flex-direction: column;
-}
+    align-items:center;
+    width:80%;
+    
 
-#result #shareBtn{
-    border-radius: 10px;
-    padding: 0.5rem;
-    border: 1px solid #f19c79;
+    height: 75%;
+    
     background-color: #f6f4d2;
-    color: #f19c79
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 8px rgba(0,0,0,0.25),0 5px 8px rgba(0,0,0,0.2);}
+
+#result h1 {
+    margin-bottom:1rem;
+}
+#result #shareBtn{
+    width: 40%;
+    margin-bottom:1.25rem;
+    background-color: #FEE500;
+    color:#3a1d1d;
+    border: none;
 }
 
+#result #shareBtn:hover{
+    background-color: #f6f4d2;
+    color:#fee500;
+
+    border: 1px solid #fee500;
+    
+}
+
+
+
+#resultName{
+    width:80%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    font-size: 1.5rem;
+}
+
+#resultDescription{
+    width:80%;
+    padding: 1rem;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+#resultImage {
+    width: 300px;
+}
 
 /* #d4e09b
 #f6f4d2

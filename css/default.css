@@ -1,7 +1,7 @@
 body {
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
 
   font-family: 'Gaegu', cursive;
@@ -9,6 +9,9 @@ body {
 .container {
   background-color: #d4e09b;
   margin: 0;
+  min-height: 100vh;
+
+
   height: 100%;
   display: flex;
   align-items: center;
@@ -25,6 +28,35 @@ img {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+button {
+  padding: 0.5rem;
+  border-radius: 10px; 
+  font-size: 1rem;
+  background-color: #f6f4d2;
+  display: block;
+  
+  color: #f19c79;
+  
+
+  font-family: 'Gaegu', cursive;
+  font-weight:bold;
+  border: 1px solid #f19c79;
+
+  margin: 0.5rem;
+
+
+  cursor: pointer;
+  width: 50%;
+}
+
+button:hover {
+  background-color: #a44a3f;
+    color: #f6f4d2;
+    border: 1px solid #f6f4d2;
+}
+
+
 
 .hide {
   display: none;

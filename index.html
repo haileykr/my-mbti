@@ -4,10 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="PandaCoding">
+  <meta name="author" content="haileykr">
   <meta name="keywords" content="십이간지 연애유형">
   <meta name="description" content="십이간지 연애유형">
 
+  
+  <!-- sns share -->
+  <meta property="og:url" content = "https://my-mbti-animal.netlify.app" />
+  <meta property="og:title" content="십이간지 연애유형"/>
+  <meta property ="og:image" content="img/share.png"/>
+  <meta property ="og:type" content="website"/>
+
+  <meta property ="og:description" content="십이간지로 알아보는 연애유형"
+
+   />
+  
   <!--favicon-->
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
@@ -30,14 +41,16 @@
   <link rel="stylesheet" href = "css/result.css">
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
-  //Kakao.init(JavaScript Key);
-  //Kakao.isInitialized();
+  // Kakao.init(KakaoAPIKey);
+  // Kakao.isInitialized();
   </script>
 
 
 <script defer src="./js/data.js" charset="utf-8"></script>
     <script defer src="./js/launch.js" charset="utf-8"></script>
-    <script defer src="./js/share.js" charset="utf-8"></script>
+    <script defer src="./js/main.js" charset="utf-8"></script>
+
+    <!-- <script defer src="./js/kakaoShare.js" charset="utf-8"></script> -->
   
 </head>
 
@@ -80,10 +93,7 @@
       <div id="resultDescription">
 
       </div>
-      <p>
-        결과입니다!
-        
-      </p>
+      
       <button id="shareBtn">공유하기</button>
       
     </section>
