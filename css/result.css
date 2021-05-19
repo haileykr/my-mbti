@@ -1,0 +1,19 @@
+#result {
+    
+    flex-direction: column;
+}
+
+#result #shareBtn{
+    border-radius: 10px;
+    padding: 0.5rem;
+    border: 1px solid #f19c79;
+    background-color: #f6f4d2;
+    color: #f19c79
+}
+
+
+/* #d4e09b
+#f6f4d2
+#cbdfbd
+#f19c79
+#a44a3f */

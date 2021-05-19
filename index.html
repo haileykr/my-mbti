@@ -23,6 +23,11 @@
 
   <link rel="stylesheet" href="css/main.css">
 
+  
+  
+  <link rel="stylesheet" href="css/qna.css">
+  
+  <link rel="stylesheet" href = "css/result.css">
   <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
   <script>
   //Kakao.init(JavaScript Key);
@@ -54,17 +59,32 @@
     
     <section id="qna"   class= "hide">
       
-      <div id="question"></div>
+      <div class="status">
+        <div id="statusBar">
+
+        </div>
+      </div><div id="question"></div>
         <div id="answer">
           
         </div>
 
-      <p>test!</p>
-
       
   
     </section>
-    <section id="result" class="mx-auto my-5 py-5 px-3">
+    <section id="result"class="hide">
+      <h1>당신의 결과는?!</h1>
+      <div id="resultName">
+
+      </div>
+        <img  id="resultImage" src="" alt="main">
+      <div id="resultDescription">
+
+      </div>
+      <p>
+        결과입니다!
+        
+      </p>
+      <button id="shareBtn">공유하기</button>
       
     </section>
 
