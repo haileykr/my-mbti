@@ -3,24 +3,46 @@ const qna = document.getElementById("qna");
 const result = document.getElementById("result");
 
 const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
 const answerContainer = document.getElementById("answer");
 
+// const resultKeys = {
+//   mouse: 1,
+//   cow: 2,
+//   tiger: 3,
+//   rabbit: 4,
+//   dragon: 5,
+//   snake: 6,
+//   horse: 7,
+//   sheep: 8,
+//   monkey: 9,
+//   chick: 10,
+//   dog: 11,
+//   pig: 12,
+// };
+
 const resultKeys = {
-  mouse: 1,
-  cow: 2,
-  tiger: 3,
-  rabbit: 4,
-  dragon: 5,
-  snake: 6,
-  horse: 7,
-  sheep: 8,
-  monkey: 9,
-  chick: 10,
-  dog: 11,
-  pig: 12,
+  ENFJ: 1,
+  ENFP: 2,
+  INFP: 3,
+  INFJ: 4,
+  ENTJ: 5,
+  ENTP: 6,
+  INTJ: 7,
+  INTP: 8,
+  ESFJ: 9,
+  ESTJ: 10,
+  ESFP: 11,
+  ESTP: 12,
+  ISFJ: 13,
+  ISTJ: 14,
+  ISFP: 15,
+  ISTP: 16,
 };
 
-const numOfQs = 12;
+const countKeys = ["E", "N", "F", "P", "S", "T", "J", "I"];
+
+const numOfQs=qnaList.length;
 const selections = new Array(numOfQs);
 let index = 0;
 
@@ -78,7 +100,7 @@ const goToResult = () => {
 const calcResult = () => {
   const dicObj = {};
 
-  for (let i of Object.keys(resultKeys)) {
+  for (let i of countKeys) {
     dicObj[i] = 0;
   }
 
@@ -90,30 +112,48 @@ const calcResult = () => {
   }
   console.log(dicObj);
 
-  const resultNum = [];
-  const objKeys = Object.keys(dicObj);
-  const objValues = Object.values(dicObj);
-  for (let i = 0; i < 12; i++) {
-    resultNum.push([objKeys[i], objValues[i]]);
-  }
-  resultNum.sort((a, b) => b[1] - a[1]);
-  return resultNum[0][0];
+  let answer = "";
+
+  if (dicObj["E"] >= dicObj["I"]) answer += "E";
+  else answer += "I";
+  if (dicObj["N"] >= dicObj["S"]) answer += "N";
+  else answer += "S";
+  if (dicObj["F"] >= dicObj["T"]) answer += "F";
+  else answer += "T";
+
+  if (dicObj["J"] >= dicObj["P"]) answer += "J";
+  else answer += "P";
+
+  return answer;
+
+  // const resultNum = [];
+  // const objKeys = Object.keys(dicObj);
+  // const objValues = Object.values(dicObj);
+  // for (let i = 0; i < 12; i++) {
+  //   resultNum.push([objKeys[i], objValues[i]]);
+  // }
+  // resultNum.sort((a, b) => b[1] - a[1]);
+  // console.log(resultNum)
+  // return resultNum[0][0];
 };
 
 const setResult = () => {
   const result = calcResult();
   const key = resultKeys[result] - 1;
-  
+
   const resultImg = document.getElementById("resultImage");
   resultImg.src = `img/image-${key}.png`;
   resultImg.alt = result;
   const resultName = document.getElementById("resultName");
   const resultDescription = document.getElementById("resultDescription");
+  const resultDwb = document.getElementById("resultDwb");
   resultName.innerText = infoList[key].name;
   resultDescription.innerText = infoList[key].desc;
+  resultDwb.innerText = infoList[key].dwb;
 };
 
 startBtn.addEventListener("click", onLaunchClick);
+// resetBtn.addEventListener("click", onLaunchClick);
 
 answerContainer.addEventListener("click", (e) => {
   if (e.target.nodeName === "BUTTON") {
@@ -122,7 +162,7 @@ answerContainer.addEventListener("click", (e) => {
     for (let button of buttons) {
       button.style.animation = "fadeOut 0.5s";
       setTimeout(() => {
-        button.style.opacity=0;
+        button.style.opacity = 0;
         button.remove();
       }, 450);
     }

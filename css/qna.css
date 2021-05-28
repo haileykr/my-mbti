@@ -1,64 +1,65 @@
 #qna {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .status {
-    height: 10px;
-    width: 50%;
-    position: absolute;
-    top: 50px;
-    background-color: aliceblue;
-    margin-bottom: 2rem;
-    border-radius:10px;
+  height: 10px;
+  width: 50%;
+  position: absolute;
+  top: 50px;
+  background-color: aliceblue;
+  margin-bottom: 2rem;
+  border-radius: 10px;
 }
 
-
-
 #statusBar {
-    border-radius:10px;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(90deg, #87986a, #87986a33);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #87986a, #87986a33);
 }
 
 #question {
-    position:absolute;
-    top:100px;
-    padding: 1rem;
-    box-sizing: border-box;
-    font-family: 'Gaegu', cursive;
-    font-size: 1.5rem;
-    color: #87986a;
-    font-weight: bold;
+  position: absolute;
+  top: 100px;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  font-family: "Gaegu", cursive;
+  font-size: 1.5rem;
+  color: #87986a;
+  font-weight: bold;
+  background-color: #f6f4d2;
+  width: 50%;
 
-    background-color:#f6f4d2;
-    width: 50%;
-    
-    border-radius: 10px;
-    box-shadow: 0 5px 8px rgba(0,0,0,0.25),0 5px 8px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.25), 0 5px 8px rgba(0, 0, 0, 0.2);
 }
 
 #answer {
-    
-    
-    
-    position:absolute;
-    top:200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 250px;
+  position: absolute;
+  top: 200px;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  width: 50%;
+  min-height: 300px;
 }
 
-.answerOptions{
-    font-size:1.25rem;
+.answerOptions {
+  font-size: 1.5rem;
+  width: 100%;
 }
 
-/* #d4e09b
-#f6f4d2
-#cbdfbd
-#f19c79
-#a44a3f */
+@media (max-width: 500px){
+  #question {
+    width: 90%;
+  }
+  #answer{
+
+    width: 90%;
+    align-items:center;
+    flex-direction: column
+  }
+}
