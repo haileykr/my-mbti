@@ -28,7 +28,6 @@
     height: 250px;
   }
 }
-
 #main button {
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -38,8 +37,8 @@
   color: #f19c79;
   border-radius: 10px;
 }
-
-#main button:hover {
+#main button:hover,
+#main button:focus {
   background-color: #a44a3f;
   color: #f6f4d2;
   border: 1px solid #f6f4d2;

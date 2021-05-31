@@ -26,8 +26,8 @@ const resultKeys = {
   ENFP: 2,
   INFP: 3,
   INFJ: 4,
-  ENTJ: 5,
-  ENTP: 6,
+  ENTP: 5,
+  ENTJ: 6,
   INTJ: 7,
   INTP: 8,
   ESFJ: 9,
@@ -54,8 +54,8 @@ const addAnswer = (opt, i) => {
 
   setTimeout(() => {
     answerContainer.appendChild(button);
-    button.style.animation = "fadeIn 0.5s";
-  }, 450);
+    button.style.animation = "fadeIn 0.3s";
+  }, 250);
 };
 
 const showNextQuestion = (index) => {
@@ -73,7 +73,7 @@ const showNextQuestion = (index) => {
 
 const onLaunchClick = () => {
   main.classList.toggle("hide");
-  main.style.animation = "fadeOut 0.5s";
+  main.style.animation = "fadeOut 0.3s";
   setTimeout(() => {
     main.classList.toggle("show");
     qna.classList.toggle("hide");
@@ -81,20 +81,20 @@ const onLaunchClick = () => {
 
     showNextQuestion(0);
 
-    qna.style.animation = "fadeIn 0.5s";
-  }, 450);
+    qna.style.animation = "fadeIn 0.25s";
+  }, 250);
 };
 
 const goToResult = () => {
   setResult();
   qna.classList.toggle("hide");
-  qna.style.animation = "fadeOut 0.5s";
+  qna.style.animation = "fadeOut 0.3s";
   setTimeout(() => {
     qna.classList.toggle("show");
     result.classList.toggle("hide");
     result.classList.toggle("show");
-    result.style.animation = "fadeIn 0.5s";
-  }, 450);
+    result.style.animation = "fadeIn 0.3s";
+  }, 250);
 };
 
 const calcResult = () => {
@@ -160,11 +160,11 @@ answerContainer.addEventListener("click", (e) => {
     selections[index] = e.target.name;
     const buttons = document.querySelectorAll(".answerOptions");
     for (let button of buttons) {
-      button.style.animation = "fadeOut 0.5s";
+      button.style.animation = "fadeOut 0.3s";
       setTimeout(() => {
         button.style.opacity = 0;
         button.remove();
-      }, 450);
+      }, 250);
     }
 
     if (index + 1 === numOfQs) {

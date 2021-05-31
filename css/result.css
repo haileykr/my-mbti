@@ -14,21 +14,22 @@
   margin-bottom: 1rem;
 }
 #result #shareBtn,
-#result  #resetBtn {
-  width:100%;
+#result #resetBtn {
+  width: 100%;
   background-color: #fee500;
   color: #3a1d1d;
-
-  
-
-  
-  
   margin: 1.25rem 0;
-
   border: none;
 }
 
-#result #shareBtn:hover {
+#result a{
+  text-decoration:none;
+}
+
+#result #shareBtn:hover,
+#result #shareBtn:focus,
+#result #resetBtn:hover,
+#result #resetBtn:focus {
   background-color: #f6f4d2;
   color: #fee500;
   border: 1px solid #fee500;
