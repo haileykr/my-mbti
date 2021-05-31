@@ -5,9 +5,9 @@ body {
   text-align: center;
   font-family: "Gaegu", cursive;
 }
+
 .container {
   background-image: url("../img/tree_repeat.png");
-
   background-size: 125px;
   background-repeat: repeat;
   background-color: #d4e09b;

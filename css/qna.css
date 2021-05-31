@@ -39,7 +39,7 @@
 
 #answer {
   position: absolute;
-  top:  230px;
+  top: 230px;
   display: flex;
   flex-direction: row;
   /* align-items: center; */
@@ -52,14 +52,13 @@
   width: 100%;
 }
 
-@media (max-width: 500px){
+@media (max-width: 500px) {
   #question {
     width: 90%;
   }
-  #answer{
-
+  #answer {
     width: 90%;
-    align-items:center;
-    flex-direction: column
+    align-items: center;
+    flex-direction: column;
   }
 }

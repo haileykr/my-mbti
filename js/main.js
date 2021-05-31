@@ -42,7 +42,7 @@ const resultKeys = {
 
 const countKeys = ["E", "N", "F", "P", "S", "T", "J", "I"];
 
-const numOfQs=qnaList.length;
+const numOfQs = qnaList.length;
 const selections = new Array(numOfQs);
 let index = 0;
 
